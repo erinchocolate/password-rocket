@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\RecordController;
+use App\Models\Record;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Show password generator
+Route::get('/', [RecordController::class, 'create']);
+
+// All password records
+Route::get('/records/dashboard', [RecordController::class, 'dashboard']);
+
+// Single password info
+Route::get('/records/{record}', [RecordController::class, 'show']);
+
+
