@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/rocket.png" />
+    <!-- Icon library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,200;0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind css custom config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              veryDarkGrey: "#18171F",
+              darkGrey: "#24232C",
+              grey: "#817D92",
+              almostWhite: "#E6E5EA",
+              neonGreen: "#A4FFAF",
+              red: "#F64A4A",
+              orange: "#FB7C58",
+              yellow: "#F8CD65",
+            },
+            fontFamily: {
+              display: ["JetBrains Mono", "monospace"],
+            },
+          },
+        },
+      };
+    </script>
+    <title>Password Rocket🚀</title>
+  </head>
+  <body class="mb-48 font-display bg-veryDarkGrey">
+    <!-- Navigation bar-->
+    <nav
+      class="flex justify-between text-almostWhite items-center font-bold font-style: italic"
+    >
+      <a href="index.html" class="hover:text-neonGreen"
+        ><img class="w-12" src="images/rocket.png" alt="rocket emoji" />
+      </a>
+      <ul class="flex space-x-6 mr-6">
+        <li>
+          <a href="register.html" class="hover:text-neonGreen">
+            <i class="fa-sharp fa-solid fa-pen-to-square"></i> Register</a
+          >
+        </li>
+        <li>
+          <a href="login.html" class="hover:text-neonGreen">
+            <i class="fa-sharp fa-solid fa-bolt"></i> Login</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Register form-->
+    <main>
+      <div>
+        <div
+          class="bg-darkGrey border p-10 rounded max-w-lg mx-auto mt-24 text-almostWhite"
+        >
+          <header class="text-center">
+            <h2 class="text-2xl font-bold uppercase mb-1">Register</h2>
+          </header>
+
+          <form action="">
+            <div class="mb-6">
+              <label for="name" class="inline-block text-lg mb-2"> Name </label>
+              <input
+                type="text"
+                class="border rounded p-2 w-full"
+                name="name"
+              />
+            </div>
+
+            <div class="mb-6">
+              <label for="email" class="inline-block text-lg mb-2">Email</label>
+              <input
+                type="email"
+                class="border rounded p-2 w-full"
+                name="email"
+              />
+
+              <!-- Error Message -->
+              <p class="text-neonGreen text-xs mt-1">
+                Please enter a valid email
+              </p>
+            </div>
+
+            <div class="mb-6">
+              <label for="password" class="inline-block text-lg mb-2">
+                Password
+              </label>
+              <input
+                type="password"
+                class="border rounded p-2 w-full"
+                name="password"
+              />
+            </div>
+
+            <div class="mb-6">
+              <label for="password2" class="inline-block text-lg mb-2">
+                Confirm Password
+              </label>
+              <input
+                type="password"
+                class="border rounded p-2 w-full"
+                name="password2"
+              />
+            </div>
+
+            <div class="mb-6">
+              <button
+                type="submit"
+                class="py-2 px-4 border-2 border-white bg-neonGreen text-veryDarkGrey font-bold py-2 hover:text-neonGreen hover:bg-darkGrey hover:border-neonGreen"
+              >
+                Sign Up
+              </button>
+            </div>
+
+            <div class="mt-8">
+              <p>
+                Already have an account?
+                <a href="login.html" class="hover:text-neonGreen">Login</a>
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer-->
+    <footer
+      class="fixed bottom-0 left-0 w-full flex items-center justify-start font-bold bg-veryDarkGrey text-almostWhite h-24 mt-24 opacity-90 md:justify-center"
+    >
+      <p class="ml-2">Copyright &copy; 2022, Meiqiao All Rights reserved</p>
+    </footer>
+  </body>
+</html>
