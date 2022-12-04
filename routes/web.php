@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\RecordController;
 use App\Models\Record;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\RecordController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,10 +19,28 @@ use Illuminate\Support\Facades\Route;
 // Show password generator
 Route::get('/', [RecordController::class, 'create']);
 
-// All password records
-Route::get('/records/dashboard', [RecordController::class, 'dashboard']);
+// Save password
+Route::post('/records', [RecordController::class, 'store']);
 
-// Single password info
+// Check single password info
 Route::get('/records/{record}', [RecordController::class, 'show']);
+
+// Show Register Form
+Route::get('/register', [UserController::class, 'register']);
+
+// Show Login Form
+Route::get('/login', [UserController::class, 'login']);
+
+// Create New User
+Route::post('/user/register', [UserController::class, 'create']);
+
+// User login
+Route::post('/user/authenticate', [UserController::class, 'authenticate']);
+
+// User logout
+Route::post('/user/logout', [UserController::class, 'logout']);
+
+// Show user dashboard
+Route::get('/user/dashboard', [RecordController::class, 'dashboard']);
 
 

@@ -14,7 +14,7 @@
         </p>
         <div>
           <a
-            href="register.html"
+            href="/register"
             class="inline-block border-2 border-white py-2 px-4 rounded-2xl uppercase mt-2 hover:text-neonGreen hover:border-neonGreen"
             >Sign Up to save your password</a
           >
@@ -97,7 +97,9 @@
               Generate
               <i class="fa-sharp fa-solid fa-arrow-right-long"></i>
             </button>
-            <button
+
+              <button
+              id="save"
               class="border-2 border-white bg-neonGreen text-veryDarkGrey font-bold py-2 hover:text-neonGreen hover:bg-darkGrey hover:border-neonGreen"
             >
               Save
@@ -107,5 +109,4 @@
         </div>
       </div>
     </main>
-
 @endsection

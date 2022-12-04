@@ -60,7 +60,7 @@
       </a>
       <ul class="flex space-x-6 mr-6">
         <li>
-          <a href="/" class="hover:text-neonGreen"
+          <a href="/records/dashboard" class="hover:text-neonGreen"
             ><i class="fa-sharp fa-solid fa-gear"></i> Manage Passwords</a
           >
         </li>

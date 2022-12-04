@@ -60,23 +60,24 @@
       </a>
       <ul class="flex space-x-6 mr-6">
         <li>
-          <a href="dashboard.html" class="hover:text-neonGreen"
+          <a href="/user/dashboard" class="hover:text-neonGreen"
             ><i class="fa-sharp fa-solid fa-gear"></i> Manage Passwords</a
           >
         </li>
         <li>
-          <a href="index.html" class="hover:text-neonGreen"
-            ><i class="fa-sharp fa-solid fa-right-from-bracket"></i> Logout</a
-          >
+          <form class="inline hover:text-neonGreen" method="POST" action="/user/logout">
+            @csrf
+            <button type="submit"><i class="fa-sharp fa-solid fa-right-from-bracket"></i>Logout</button>
         </li>
       </ul>
     </nav>
     <div class="text-almostWhite">
       <div class="bg-darkGrey border border-almostWhite p-10 rounded">
         <header>
-          <h1 class="text-3xl text-center font-bold uppercase">
-            Manage Passwords
+          <h1 class="text-3xl text-center font-bold">
+            Hi👋{{auth()->user()->name}}
           </h1>
+          <p class="mt-4 text-xl text-center font">Manage your passwords👇</p>
         </header>
 
   @yield('content')

@@ -25,4 +25,9 @@ class RecordController extends Controller
         'record' => $record
     ]);
     }
+
+    // Save password
+    public function store(Request $request){
+        dd($request);
+    }
 }

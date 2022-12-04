@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" href="{{asset('images/rocket.png')}}" />
     <!-- Icon library -->
     <link
@@ -59,12 +60,12 @@
       </a>
       <ul class="flex space-x-6 mr-6">
         <li>
-          <a href="register.html" class="hover:text-neonGreen"
+          <a href="/register" class="hover:text-neonGreen"
             ><i class="fa-sharp fa-solid fa-pen-to-square"></i> Register</a
           >
         </li>
         <li>
-          <a href="login.html" class="hover:text-neonGreen">
+          <a href="/login" class="hover:text-neonGreen">
             <i class="fa-sharp fa-solid fa-bolt"></i> Login</a
           >
         </li>
@@ -77,6 +78,6 @@
     >
       <p class="ml-2">Copyright &copy; 2022, Meiqiao All Rights reserved</p>
     </footer>
-    {{-- <script src="{{asset('js/scripts.js')}}" defer></script> --}}
+    <script src="{{ URL::asset('js/script.js') }}"></script>
   </body>
 </html>
