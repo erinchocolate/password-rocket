@@ -18,29 +18,28 @@ const randomFunc = {
     symbol: getRandomSymbol,
 };
 
-saveElement.addEventListener('click', () => {
-    let token = document
-           .querySelector('meta[name="csrf-token"]')
-           .getAttribute("content");
+// saveElement.addEventListener('click', () => {
+//     let token = document
+//            .querySelector('meta[name="csrf-token"]')
+//            .getAttribute("content");
     
-    fetch("/records", {
-        headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json, text-plain, */*",
-            "X-Requested-With": "XMLHttpRequest",
-            "X-CSRF-TOKEN": token
-        },
-        method: "post",
-        credentials: "same-origin",
-        body: JSON.stringify({
-            password: finalPassword,
-            description: "78987",
-        }),
-    }).catch(function (error) {
-        console.log(error);
-    });
-})
-
+//     fetch("/records", {
+//         headers: {
+//             "Content-Type": "application/json",
+//             Accept: "application/json, text-plain, */*",
+//             "X-Requested-With": "XMLHttpRequest",
+//             "X-CSRF-TOKEN": token,
+//         },
+//         method: "POST",
+//         credentials: "same-origin",
+//         body: JSON.stringify({
+//             password: finalPassword,
+//             description: "78987",
+//         }),
+//     }).catch(function (error) {
+//         console.log(error);
+//     });
+// })
 
 generateElement.addEventListener("click", () => {
     const hasLower = lowercaseElement.checked;
@@ -82,6 +81,8 @@ function generatePassword(lower, upper, number, symbol) {
     }
 
     finalPassword = generatedPassword.slice(0, length);
+    saveElement.setAttribute("name", "password");
+    saveElement.setAttribute('value', finalPassword);
     return finalPassword;
 }
 

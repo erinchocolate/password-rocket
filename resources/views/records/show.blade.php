@@ -3,7 +3,7 @@
 @section('content')
 <!-- Password Description-->
     <main class="text-almostWhite">
-      <a href="/" class="inline-block ml-4 mb-4"
+      <a href="/user/dashboard" class="inline-block ml-4 mb-4"
         ><i class="fa-solid fa-arrow-left"></i> Back
       </a>
 

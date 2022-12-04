@@ -22,6 +22,9 @@ Route::get('/', [RecordController::class, 'create']);
 // Save password
 Route::post('/records', [RecordController::class, 'store']);
 
+// Show password edit form
+Route::get('/records/{record}/edit', [RecordController::class, 'edit']);
+
 // Check single password info
 Route::get('/records/{record}', [RecordController::class, 'show']);
 

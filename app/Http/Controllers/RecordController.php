@@ -28,6 +28,16 @@ class RecordController extends Controller
 
     // Save password
     public function store(Request $request){
-        dd($request);
+        
+        $formFields = $request->validate([
+            'password'=>'required',
+        ]);
+        Record::create($formFields);
+        return redirect("/user/dashboard");
+    }
+
+    // Show password edit form
+    public function edit(Record $record){
+        return view('records.show',['record'=>$record]);
     }
 }

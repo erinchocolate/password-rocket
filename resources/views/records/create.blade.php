@@ -98,13 +98,18 @@
               <i class="fa-sharp fa-solid fa-arrow-right-long"></i>
             </button>
 
-              <button
+
+            <form method="POST" action="/records">
+            @csrf
+            <button class="border-2 border-white bg-neonGreen text-veryDarkGrey font-bold py-2 hover:text-neonGreen hover:bg-darkGrey hover:border-neonGreen" type="submit" id="save"><i class="fa-sharp fa-solid fa-floppy-disk"></i>Save</button>
+
+              {{-- <button
               id="save"
               class="border-2 border-white bg-neonGreen text-veryDarkGrey font-bold py-2 hover:text-neonGreen hover:bg-darkGrey hover:border-neonGreen"
             >
               Save
               <i class="fa-sharp fa-solid fa-floppy-disk"></i>
-            </button>
+            </button> --}}
           </div>
         </div>
       </div>

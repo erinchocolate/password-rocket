@@ -10,8 +10,8 @@
               <a href="/records/{{$record->id}}">{{$record->password}} </a>
             </td>
             <td class="px-4 py-8 border-almostWhite text-lg">
-              <a href="edit.html" class="text-neonGreen hover:text-red"
-                ><i class="fa-solid fa-pen-to-square"></i> Edit</a
+              <a href="/records/{{$record->id}}/edit" class="text-neonGreen hover:text-red"
+                ><i class="fa-solid fa-pen-to-square"></i>Edit</a
               >
             </td>
             <td class="px-4 py-8 border-almostWhite text-lg">
