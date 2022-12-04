@@ -128,4 +128,5 @@
         </div>
       </div>
     </main>
+    <script src="{{ URL::asset('js/script.js') }}"></script>
 @endsection

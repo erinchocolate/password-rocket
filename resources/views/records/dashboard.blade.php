@@ -31,11 +31,11 @@
           <p class="mt-4 text-xl text-center font">Manage your passwords👇</p>
         </header>
 
-@foreach($records as $record)
-<div class="flex flex-row">
-<table class="w-full">
+    @foreach($records as $record)
+      <div class="">
+        <table class="w-full flex flex-row justify-center">
           <tr>
-            <td class="px-4 py-8 border-almostWhite text-lg">
+            <td class="px-4 py-8 border-almostWhite text-lg hover:text-red">
               <a href="/records/{{$record->id}}">{{$record->password}} </a>
             </td>
             <td class="px-4 py-8 border-almostWhite text-lg">
@@ -43,18 +43,10 @@
                 ><i class="fa-solid fa-pen-to-square"></i>Edit</a
               >
             </td>
-            {{-- <td class="px-4 py-8 border-almostWhite text-lg">
-              <form method="POST" action="/records/{{$record->id}}">
-                @csrf
-                @method('delete')
-                <button class="text-neonGreen hover:text-red">
-                  <i class="fa-solid fa-trash-can"></i>
-                  Delete
-                </button>
-              </form> --}}
+            <td class="px-4 py-8 border-almostWhite text-lg">
             </td>
           </tr>
         </table>
-</div>
-@endforeach
+      </div>
+    @endforeach
 @endsection

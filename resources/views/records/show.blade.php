@@ -15,11 +15,6 @@
             ><i class="fa-sharp fa-solid fa-gear"></i> Manage Passwords</a
           >
         </li>
-        <li>
-          <form class="inline hover:text-neonGreen" method="POST" action="/user/logout">
-            @csrf
-            <button type="submit"><i class="fa-sharp fa-solid fa-right-from-bracket"></i>Logout</button>
-        </li>
       </ul>
     </nav>
 <!-- Password Description-->
@@ -28,13 +23,21 @@
         ><i class="fa-solid fa-arrow-left"></i> Back
       </a>
 
-      <div class="flex flex-col items-center justify-center text-center">
+      <div class="flex flex-col items-center justify-center text-center gap-20">
         <h3 class="text-2xl mb-2">{{$record->password}}</h3>
         <div class="text-lg space-y-6">
           <p>
             {{$record->description}}
           </p>
         </div>
-      </div>
+          <form method="POST" action="/records/{{$record->id}}">
+            @csrf
+            @method('delete')
+            <button class="text-neonGreen hover:text-red">
+              <i class="fa-solid fa-trash-can"></i>
+                Delete
+            </button>
+          </form>
+        </div>
     </main>
 @endsection

@@ -59,6 +59,6 @@
     >
       <p class="ml-2">Copyright &copy; 2022, Meiqiao All Rights reserved</p>
     </footer>
-    <script src="{{ URL::asset('js/script.js') }}"></script>
+    
   </body>
 </html>

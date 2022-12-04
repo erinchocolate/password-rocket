@@ -44,7 +44,8 @@ class RecordController extends Controller
      // Update password
     public function update(Request $request, Record $record){
         $formFields = $request->validate([
-            'password'=>'required'
+            'password'=>'required',
+            'description'=>'required'
         ]);
         $record->update($formFields);
         return redirect("/dashboard");
