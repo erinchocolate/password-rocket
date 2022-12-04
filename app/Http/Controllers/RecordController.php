@@ -12,6 +12,17 @@ class RecordController extends Controller
          return view('records.create');
     }
 
+    // Save password
+    public function store(Request $request){
+        
+        $formFields = $request->validate([
+            'password'=>'required',
+        ]);
+        // Create an entry in database
+        Record::create($formFields);
+        return redirect("/");
+    }
+
     //Show dashboard view
     public function dashboard(){
          return view('records.dashboard',[
@@ -25,19 +36,23 @@ class RecordController extends Controller
         'record' => $record
     ]);
     }
-
-    // Save password
-    public function store(Request $request){
-        
-        $formFields = $request->validate([
-            'password'=>'required',
-        ]);
-        Record::create($formFields);
-        return redirect("/user/dashboard");
-    }
-
     // Show password edit form
     public function edit(Record $record){
-        return view('records.show',['record'=>$record]);
+        return view('records.edit',['record'=>$record]);
+    }
+
+     // Update password
+    public function update(Request $request, Record $record){
+        $formFields = $request->validate([
+            'password'=>'required'
+        ]);
+        $record->update($formFields);
+        return redirect("/dashboard");
+    }
+
+    // Delete password
+    public function delete(Record $record){
+        $record->delete();
+        return redirect("/dashboard");
     }
 }

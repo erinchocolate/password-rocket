@@ -22,11 +22,20 @@ Route::get('/', [RecordController::class, 'create']);
 // Save password
 Route::post('/records', [RecordController::class, 'store']);
 
+// Show user dashboard
+Route::get('/dashboard', [RecordController::class, 'dashboard']);
+
 // Show password edit form
 Route::get('/records/{record}/edit', [RecordController::class, 'edit']);
 
+// Update password
+Route::put('/records/{record}', [RecordController::class, 'update']);
+
 // Check single password info
 Route::get('/records/{record}', [RecordController::class, 'show']);
+
+// Delete password
+Route::delete('/records/{record}', [RecordController::class, 'delete']);
 
 // Show Register Form
 Route::get('/register', [UserController::class, 'register']);
@@ -43,7 +52,6 @@ Route::post('/user/authenticate', [UserController::class, 'authenticate']);
 // User logout
 Route::post('/user/logout', [UserController::class, 'logout']);
 
-// Show user dashboard
-Route::get('/user/dashboard', [RecordController::class, 'dashboard']);
+
 
 

@@ -60,14 +60,14 @@
       </a>
       <ul class="flex space-x-6 mr-6">
         <li>
-          <a href="/records/dashboard" class="hover:text-neonGreen"
+          <a href="/dashboard" class="hover:text-neonGreen"
             ><i class="fa-sharp fa-solid fa-gear"></i> Manage Passwords</a
           >
         </li>
         <li>
-          <a href="/" class="hover:text-neonGreen"
-            ><i class="fa-sharp fa-solid fa-right-from-bracket"></i> Logout</a
-          >
+          <form class="inline hover:text-neonGreen" method="POST" action="/user/logout">
+            @csrf
+            <button type="submit"><i class="fa-sharp fa-solid fa-right-from-bracket"></i>Logout</button>
         </li>
       </ul>
     </nav>

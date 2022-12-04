@@ -15,7 +15,9 @@
               >
             </td>
             <td class="px-4 py-8 border-almostWhite text-lg">
-              <form action="">
+              <form method="POST" action="/records/{{$record->id}}">
+                @csrf
+                @method('delete')
                 <button class="text-neonGreen hover:text-red">
                   <i class="fa-solid fa-trash-can"></i>
                   Delete
