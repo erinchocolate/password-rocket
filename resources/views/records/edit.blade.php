@@ -1,6 +1,27 @@
-@extends('dashboard_layout')
+@extends('layout')
 
 @section('content')
+<body class="mb-48 font-display bg-veryDarkGrey">
+    <!-- Navigation bar-->
+    <nav
+      class="flex justify-between text-almostWhite items-center font-bold font-style: italic"
+    >
+      <a href="/" class="hover:text-neonGreen"
+        ><img class="w-12" src="{{asset('images/rocket.png')}}" alt="rocket emoji" />
+      </a>
+      <ul class="flex space-x-6 mr-6">
+        <li>
+          <a href="/dashboard" class="hover:text-neonGreen"
+            ><i class="fa-sharp fa-solid fa-gear"></i> Manage Passwords</a
+          >
+        </li>
+        <li>
+          <form class="inline hover:text-neonGreen" method="POST" action="/user/logout">
+            @csrf
+            <button type="submit"><i class="fa-sharp fa-solid fa-right-from-bracket"></i>Logout</button>
+        </li>
+      </ul>
+    </nav>
 
     <!-- Edit Form-->
     <main class="text-almostWhite">

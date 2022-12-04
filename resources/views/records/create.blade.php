@@ -1,6 +1,27 @@
-@extends('main_layout')
+@extends('layout')
 
 @section('content')
+  <body class="mb-48 font-display bg-veryDarkGrey">
+    <!-- Navigation bar-->
+    <nav
+      class="flex justify-between text-almostWhite items-center font-bold font-style: italic"
+    >
+      <a href="/" class="hover:text-neonGreen"
+        ><img class="w-12" src="{{asset('images/rocket.png')}}" alt="rocket emoji" />
+      </a>
+      <ul class="flex space-x-6 mr-6">
+        <li>
+          <a href="/register" class="hover:text-neonGreen"
+            ><i class="fa-sharp fa-solid fa-pen-to-square"></i> Register</a
+          >
+        </li>
+        <li>
+          <a href="/login" class="hover:text-neonGreen">
+            <i class="fa-sharp fa-solid fa-bolt"></i> Login</a
+          >
+        </li>
+      </ul>
+    </nav>
     <!-- Hero-->
     <section
       class="relative h-72 flex flex-col justify-center align-center text-center space-y-4 mb-4"
@@ -98,18 +119,11 @@
               <i class="fa-sharp fa-solid fa-arrow-right-long"></i>
             </button>
 
-
-            <form method="POST" action="/records">
+            <!-- Use HTML form to post generated password to php server-->
+            <form method="POST" action="/records" class="border-2 border-white bg-neonGreen text-veryDarkGrey font-bold py-2 hover:text-neonGreen hover:bg-darkGrey hover:border-neonGreen text-center">
             @csrf
-            <button class="border-2 border-white bg-neonGreen text-veryDarkGrey font-bold py-2 hover:text-neonGreen hover:bg-darkGrey hover:border-neonGreen" type="submit" id="save"><i class="fa-sharp fa-solid fa-floppy-disk"></i>Save</button>
+            <button type="submit" id="save">Save <i class="fa-sharp fa-solid fa-floppy-disk"></i></button>
 
-              {{-- <button
-              id="save"
-              class="border-2 border-white bg-neonGreen text-veryDarkGrey font-bold py-2 hover:text-neonGreen hover:bg-darkGrey hover:border-neonGreen"
-            >
-              Save
-              <i class="fa-sharp fa-solid fa-floppy-disk"></i>
-            </button> --}}
           </div>
         </div>
       </div>

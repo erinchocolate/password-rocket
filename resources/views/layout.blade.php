@@ -1,10 +1,12 @@
+<!-- This is the layout used for create.page-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="{{asset('images/rocket.png')}}"/>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="icon" href="{{asset('images/rocket.png')}}" />
     <!-- Icon library -->
     <link
       rel="stylesheet"
@@ -50,45 +52,13 @@
     <title>Password Rocket🚀</title>
   </head>
 
-  <body class="mb-48 font-display bg-veryDarkGrey">
-    <!-- Navigation bar-->
-    <nav
-      class="flex justify-between text-almostWhite items-center font-bold font-style: italic"
-    >
-      <a href="/" class="hover:text-neonGreen"
-        ><img class="w-12" src="{{asset('images/rocket.png')}}" alt="rocket emoji" />
-      </a>
-      <ul class="flex space-x-6 mr-6">
-        <li>
-          <a href="/dashboard" class="hover:text-neonGreen"
-            ><i class="fa-sharp fa-solid fa-gear"></i> Manage Passwords</a
-          >
-        </li>
-        <li>
-          <form class="inline hover:text-neonGreen" method="POST" action="/user/logout">
-            @csrf
-            <button type="submit"><i class="fa-sharp fa-solid fa-right-from-bracket"></i>Logout</button>
-        </li>
-      </ul>
-    </nav>
-    <div class="text-almostWhite">
-      <div class="bg-darkGrey border border-almostWhite p-10 rounded">
-        <header>
-          <h1 class="text-3xl text-center font-bold">
-            Hi👋{{auth()->user()->name}}
-          </h1>
-          <p class="mt-4 text-xl text-center font">Manage your passwords👇</p>
-        </header>
-
-  @yield('content')
-    </div>
-    </div>
-  
+    @yield('content')
     <!-- Footer-->
     <footer
       class="fixed bottom-0 left-0 w-full flex items-center justify-start font-bold bg-veryDarkGrey text-almostWhite h-24 mt-24 opacity-90 md:justify-center"
     >
       <p class="ml-2">Copyright &copy; 2022, Meiqiao All Rights reserved</p>
     </footer>
+    <script src="{{ URL::asset('js/script.js') }}"></script>
   </body>
 </html>
