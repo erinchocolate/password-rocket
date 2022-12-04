@@ -18,6 +18,12 @@ const randomFunc = {
     symbol: getRandomSymbol,
 };
 
+/*
+I was thinking to use fetch API to send password data from website to server,
+but I haven't figure out a way to fix the 500 Error therefore I decided to use
+HTML form to pass the password data
+*/
+
 // saveElement.addEventListener('click', () => {
 //     let token = document
 //            .querySelector('meta[name="csrf-token"]')
@@ -41,11 +47,14 @@ const randomFunc = {
 //     });
 // })
 
+
 generateElement.addEventListener("click", () => {
     const hasLower = lowercaseElement.checked;
     const hasUpper = uppercaseElement.checked;
     const hasNumber = numberElement.checked;
     const hasSymbol = symbolElement.checked;
+
+    //Display generated password on website
     resultElement.innerText = generatePassword(
         hasLower,
         hasUpper,
@@ -54,6 +63,7 @@ generateElement.addEventListener("click", () => {
     );
 });
 
+//https://www.freecodecamp.org/news/copy-text-to-clipboard-javascript/
 clipboardElement.addEventListener("click", () => {
     const password = resultElement.innerText;
 
@@ -69,6 +79,7 @@ function generatePassword(lower, upper, number, symbol) {
         (item) => Object.values(item)[0]
     );
 
+    //If user doesn't check any checkbox or choose 0 as length, then don't generate any password
     if (typesCount == 0 || length == 0) {
         return "";
     }
@@ -81,8 +92,9 @@ function generatePassword(lower, upper, number, symbol) {
     }
 
     finalPassword = generatedPassword.slice(0, length);
+    // Pass password data back to HTML button element and then pass it to server
     saveElement.setAttribute("name", "password");
-    saveElement.setAttribute('value', finalPassword);
+    saveElement.setAttribute("value", finalPassword);
     return finalPassword;
 }
 
@@ -91,6 +103,7 @@ function updateLength(val) {
     length = val;
 }
 
+//https://stackoverflow.com/questions/29505419/choosing-a-random-letter-from-a-z
 function getRandomLower() {
     return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
 }

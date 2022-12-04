@@ -1,4 +1,4 @@
-<!-- This is the layout used for create.page-->
+<!-- Common parts of all pages-->
 <!DOCTYPE html>
 <html lang="en">
   <head>

@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('records', function (Blueprint $table) {
             $table->id();
             $table->string('password');
+            //https://stackoverflow.com/questions/47974348/sqlstatehy000-general-error-1364-field-name-doesnt-have-a-default-value-l
             $table->longText('description')->nullable();
             $table->timestamps();
         });

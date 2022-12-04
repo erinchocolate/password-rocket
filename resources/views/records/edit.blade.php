@@ -15,11 +15,6 @@
             ><i class="fa-sharp fa-solid fa-gear"></i> Manage Passwords</a
           >
         </li>
-        {{-- <li>
-          <form class="inline hover:text-neonGreen" method="POST" action="/user/logout">
-            @csrf
-            <button type="submit"><i class="fa-sharp fa-solid fa-right-from-bracket"></i>Logout</button>
-        </li> --}}
       </ul>
     </nav>
 
