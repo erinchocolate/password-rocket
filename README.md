@@ -1,66 +1,116 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Password Rocket
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Overview
 
-## About Laravel
+Password Rocket is a password-generator web app.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Features:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- Generate passwords based on the user’s condition and length choice
+- Copy generated password to the system clipboard
+- Save generated password to database
+- Sign up with user name, email, and password
+- Log in with email and password
+- Check saved passwords after login
+- Delete saved passwords
+- Update password information
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Demo
 
-## Learning Laravel
+Generate password
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+![demo1](https://github.com/erinchocolate/password-rocket/blob/master/demo/generate.gif)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Validate and register 
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+![demo1](https://github.com/erinchocolate/password-rocket/blob/master/demo/register.gif)
 
-## Laravel Sponsors
+Authenticate and login
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+![demo1](https://github.com/erinchocolate/password-rocket/blob/master/demo/login.gif)
 
-### Premium Partners
+Update password
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+![demo1](https://github.com/erinchocolate/password-rocket/blob/master/demo/update.gif)
 
-## Contributing
+Delete password
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+![demo1](https://github.com/erinchocolate/password-rocket/blob/master/demo/delete.gif)
 
-## Code of Conduct
+Save password
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+![demo1](https://github.com/erinchocolate/password-rocket/blob/master/demo/save.gif)
 
-## Security Vulnerabilities
+## My process
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Built with
 
-## License
+- Semantic HTML5
+- Tailwind CSS - https://tailwindcss.com/
+- Vanilla JavaScript
+- Laravel - https://laravel.com/
+- MySQL database
+- Font Awesome - https://fontawesome.com/
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Continued development
+
+- Only allow logged-in users to save passwords.
+- Link passwords to specific users. Currently, all users can update and delete passwords
+
+### References
+
+**Design system**
+
+https://www.frontendmentor.io/challenges/password-generator-app-Mr8CLycqjh
+
+**Icon**
+
+https://www.freecodecamp.org/news/how-to-add-font-awesome-icons-to-your-buttons/
+
+**Range Slider**
+
+https://www.w3schools.com/howto/howto_js_rangeslider.asp
+
+https://stackoverflow.com/questions/10004723/html5-input-type-range-show-range-value
+
+**Copy to clipboard**
+
+https://www.freecodecamp.org/news/copy-text-to-clipboard-javascript/
+
+**Add JavaScript to Laravel**
+
+https://www.youtube.com/watch?v=0mVOosQfVKA
+
+**Pass data from website to Laravel**
+
+https://stackoverflow.com/questions/16036041/can-a-html-button-perform-a-post-request
+
+https://5balloons.info/example-of-vanilla-javascript-fetch-post-api-in-laravel
+
+https://stackoverflow.com/questions/46466167/laravel-5-5-ajax-call-419-unknown-status
+
+### Study Resources
+
+***\*The Complete JavaScript Course 2023: From Zero to Expert\****
+
+https://www.udemy.com/course/the-complete-javascript-course/
+
+**Build a custom object-oriented PHP MVC framework and then build an application with it**
+
+https://www.udemy.com/course/object-oriented-php-mvc/
+
+***\*Make a Spotify Clone from Scratch: JavaScript PHP and MySQL\****
+
+https://www.udemy.com/course/spotify-clone/
+
+***\*Tailwind CSS Crash Course\****
+
+https://www.youtube.com/watch?v=UBOj6rqRUME&list=PLillGF-RfqbYeckUaD1z6nviTp31GLTH8&index=29
+
+https://www.youtube.com/watch?v=dFgzHOX84xQ
+
+***\*Laravel From Scratch\****
+
+https://www.youtube.com/playlist?list=PLillGF-RfqbYhQsN5WMXy6VsDMKGadrJ-
+
+https://www.youtube.com/watch?v=MYyJ4PuL4pY&t=203s
