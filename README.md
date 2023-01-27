@@ -29,6 +29,10 @@ Save, update and delete password
 
 ![demo1](https://github.com/erinchocolate/password-rocket/blob/master/demo/save_aws.gif)
 
+Register
+
+![demo1](https://github.com/erinchocolate/password-rocket/blob/master/demo/register_aws.gif)
+
 ### Continued development
 
 - Only allow logged-in users to save passwords.
