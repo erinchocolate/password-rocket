@@ -2,7 +2,7 @@
 
 ## Overview
 
-Password Rocket is a password-generator web app.
+Password Rocket is a password-generator web app built in HTML, Tailwind CSS, JavaScript, PHP Laravel, and MySQL, deployed using AWS Beanstalk and RDS.
 
 Features:
 
@@ -88,29 +88,3 @@ https://stackoverflow.com/questions/16036041/can-a-html-button-perform-a-post-re
 https://5balloons.info/example-of-vanilla-javascript-fetch-post-api-in-laravel
 
 https://stackoverflow.com/questions/46466167/laravel-5-5-ajax-call-419-unknown-status
-
-### Study Resources
-
-***\*The Complete JavaScript Course 2023: From Zero to Expert\****
-
-https://www.udemy.com/course/the-complete-javascript-course/
-
-**Build a custom object-oriented PHP MVC framework and then build an application with it**
-
-https://www.udemy.com/course/object-oriented-php-mvc/
-
-***\*Make a Spotify Clone from Scratch: JavaScript PHP and MySQL\****
-
-https://www.udemy.com/course/spotify-clone/
-
-***\*Tailwind CSS Crash Course\****
-
-https://www.youtube.com/watch?v=UBOj6rqRUME&list=PLillGF-RfqbYeckUaD1z6nviTp31GLTH8&index=29
-
-https://www.youtube.com/watch?v=dFgzHOX84xQ
-
-***\*Laravel From Scratch\****
-
-https://www.youtube.com/playlist?list=PLillGF-RfqbYhQsN5WMXy6VsDMKGadrJ-
-
-https://www.youtube.com/watch?v=MYyJ4PuL4pY&t=203s
