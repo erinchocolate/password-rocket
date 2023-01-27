@@ -19,38 +19,15 @@ Features:
 
 Generate password
 
-![demo1](https://github.com/erinchocolate/password-rocket/blob/master/demo/generate.gif)
-
-Validate and register 
-
-![demo1](https://github.com/erinchocolate/password-rocket/blob/master/demo/register.gif)
+![demo1](https://github.com/erinchocolate/password-rocket/blob/master/demo/generate_aws.gif)
 
 Authenticate and login
 
-![demo1](https://github.com/erinchocolate/password-rocket/blob/master/demo/login.gif)
+![demo1](https://github.com/erinchocolate/password-rocket/blob/master/demo/login_aws.gif)
 
-Update password
+Save, update and delete password
 
-![demo1](https://github.com/erinchocolate/password-rocket/blob/master/demo/update.gif)
-
-Delete password
-
-![demo1](https://github.com/erinchocolate/password-rocket/blob/master/demo/delete.gif)
-
-Save password
-
-![demo1](https://github.com/erinchocolate/password-rocket/blob/master/demo/save.gif)
-
-## My process
-
-### Built with
-
-- Semantic HTML5
-- Tailwind CSS - https://tailwindcss.com/
-- Vanilla JavaScript
-- Laravel - https://laravel.com/
-- MySQL database
-- Font Awesome - https://fontawesome.com/
+![demo1](https://github.com/erinchocolate/password-rocket/blob/master/demo/save_aws.gif)
 
 ### Continued development
 
