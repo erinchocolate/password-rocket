@@ -4,7 +4,7 @@
 
 Password Rocket is a password-generator web app built in HTML, Tailwind CSS, JavaScript, PHP Laravel, and MySQL, deployed using AWS Beanstalk and RDS.
 
-URL: http://passwordrocket-env.eba-m2juaqpr.ap-southeast-2.elasticbeanstalk.com/ - I stopped the Beanstalk and RDS after I saw the bill of using them for a month, but you can see demo below of live website:)
+URL: http://passwordrocket-env.eba-m2juaqpr.ap-southeast-2.elasticbeanstalk.com/ - I stopped the Beanstalk and RDS after I saw the bill of using them for a month, but you can see demo below of the live website:)
 
 Features:
 
